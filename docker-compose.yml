@@ -1,0 +1,14 @@
+version: "1.0"
+services:
+    llama_3_local:
+        build:
+          context: .
+        image: 'llama_3_image'
+        ports:
+          - '8080:8080'
+        tty: true
+        stdin_open: true
+        volumes: 
+          - .:/home/llama_user/workspace
+        container_name: llama_3_local
+            
